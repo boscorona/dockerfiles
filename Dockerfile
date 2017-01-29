@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER hello.nbosco@gmail.com
 
 # Install Python
-Run apt-get update
+RUN apt-get update
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
     python-dev \
