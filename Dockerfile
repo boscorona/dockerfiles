@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER hello.nbosco@gmail.com
 
 # Install Python
-RUN apt-get update
+RUN sudo apt-get update
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
     python-dev \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/
     
 # Install vim and update
-RUN apt-get install vim
+RUN sudo apt-get install vim
 RUN echo "runtime vimrc" > ~/.vimrc && mkdir ~/.vim && cd ~/.vim && git clone https://github.com/nbosco/vim_starter_kit.git . && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall
 
 # Install pip and virtual environment 
