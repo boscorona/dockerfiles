@@ -14,7 +14,7 @@ RUN apt-get install git
     
     # Install vim
 RUN apt-get update \
-    && apt-get install vim \
+    && apt-get install vim -y \
     && echo "runtime vimrc" > ~/.vimrc && mkdir ~/.vim && cd ~/.vim && git clone https://github.com/nbosco/vim_starter_kit.git . && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall \
 
     # Install pip and virtual environment 
