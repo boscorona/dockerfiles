@@ -10,13 +10,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/ \
     
     # Install Git
-    sudo apt-get install git \
+    apt-get install git \
     
     # Install vim
-    sudo apt-get install vim \
+    apt-get install vim \
     echo "runtime vimrc" > ~/.vimrc && mkdir ~/.vim && cd ~/.vim && git clone https://github.com/nbosco/vim_starter_kit.git . && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall \
 
     # Install pip and virtual environment 
-    sudo apt-get install python-pip build-essential \
-    sudo pip install --upgrade pip \
-    sudo pip install --upgrade virtualenv 
+    apt-get install python-pip build-essential \
+    pip install --upgrade pip \
+    pip install --upgrade virtualenv 
+    
