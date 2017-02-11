@@ -5,6 +5,7 @@ MAINTAINER hello.nbosco@gmail.com
 # Install Python
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
+    wget -y \
     git -y \
     vim -y \
     curl \
