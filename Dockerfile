@@ -6,6 +6,7 @@ MAINTAINER hello.nbosco@gmail.com
 RUN apt-get update && apt-get install -y \
     python \
     wget -y \
+    make -y \
     git -y \
     vim -y \
     curl \
